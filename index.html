@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project Binder | JMTK Technology</title>
+<meta name="description" content="Every document your board, project or paper needs, built from one intake. Formal agendas and minutes under Robert's Rules, project plans, and thesis frameworks. Windows and Mac. Works offline.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Project Binder by JMTK Technology">
+<meta property="og:description" content="Every document your board, project or paper needs, built from one intake.">
+<meta property="og:image" content="assets/shots/07-minutes.jpg">
+<link rel="icon" href="assets/favicon.png">
+<style>
+:root{
+  --bg:#F3F5F3; --surface:#FFFFFF; --surface-2:#E9EEEB; --ink:#16212C; --muted:#52606B; --line:#D2D9D4;
+  --accent:#E8B92E; --on-accent:#16212C; --hero:#16212C; --hero-ink:#EEF2F4; --hero-muted:#B7C2CA;
+  --ui:ui-sans-serif,-apple-system,"Segoe UI",system-ui,Roboto,"Helvetica Neue",Arial,sans-serif; --r:10px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10161C; --surface:#172029; --surface-2:#1D2833; --ink:#E4EAE6; --muted:#9AA7B1; --line:#2C3946; --hero:#0B1015; --hero-ink:#EEF2F4; --hero-muted:#9AA7B1;}}
+:root[data-theme="dark"]{--bg:#10161C; --surface:#172029; --surface-2:#1D2833; --ink:#E4EAE6; --muted:#9AA7B1; --line:#2C3946; --hero:#0B1015;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--ui);-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:8px;font-weight:650;text-decoration:none;border:1px solid transparent;font-size:16px;line-height:1.2}
+.btn.primary{background:var(--accent);color:var(--on-accent)}
+.btn.primary:hover{filter:brightness(1.06)}
+.btn.ghost{border-color:rgba(255,255,255,.28);color:var(--hero-ink)}
+.btn.ghost:hover{background:rgba(255,255,255,.07)}
+:focus-visible{outline:3px solid #7AB2EA;outline-offset:2px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--hero) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav .wrap{display:flex;align-items:center;gap:20px;height:62px}
+.logo{display:flex;align-items:center;gap:10px;color:var(--hero-ink);text-decoration:none;font-weight:700;font-size:18px}
+.logo img{width:30px;height:30px;border-radius:7px}
+.logo small{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--hero-muted);font-weight:700;margin-top:-2px}
+.nav nav{margin-left:auto;display:flex;gap:22px;align-items:center}
+.nav nav a{color:var(--hero-muted);text-decoration:none;font-size:15px}
+.nav nav a:hover{color:var(--hero-ink)}
+.nav .btn{padding:8px 14px;font-size:15px}
+
+/* hero */
+.hero{background:var(--hero);color:var(--hero-ink);padding:72px 0 0;overflow:hidden}
+.hero h1{font-size:clamp(34px,5.4vw,60px);line-height:1.05;letter-spacing:-.03em;margin:0 0 18px;max-width:900px}
+.hero p.lead{font-size:clamp(17px,2vw,21px);color:var(--hero-muted);max-width:720px;margin:0 0 28px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.hero .note{font-size:14px;color:var(--hero-muted);margin:14px 0 0}
+.hero .shot{margin:52px auto 0;border-radius:12px 12px 0 0;box-shadow:0 -10px 60px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.1);border-bottom:0}
+
+/* sections */
+section{padding:84px 0}
+.kicker{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#B8860B;margin:0 0 10px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .kicker{color:var(--accent)}}
+h2{font-size:clamp(28px,3.6vw,40px);line-height:1.12;letter-spacing:-.02em;margin:0 0 14px}
+.sub{color:var(--muted);max-width:720px;margin:0 0 36px;font-size:18px}
+.aud{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.card h3{margin:0 0 8px;font-size:21px}
+.card p{margin:0 0 12px;color:var(--muted)}
+.card ul{margin:0;padding-left:20px}
+.card li{margin:4px 0}
+.card.lead{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.tag{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--accent);color:var(--on-accent);padding:3px 8px;border-radius:5px;margin-bottom:12px}
+.feature{display:grid;grid-template-columns:1fr 1.35fr;gap:44px;align-items:center;padding:34px 0}
+.feature.flip{grid-template-columns:1.35fr 1fr}
+.feature.flip .ft{order:2}
+.feature img{border-radius:10px;border:1px solid var(--line);box-shadow:0 10px 40px rgba(0,0,0,.12)}
+.feature h3{font-size:26px;letter-spacing:-.01em;margin:0 0 10px;line-height:1.2}
+.feature p{color:var(--muted);margin:0 0 10px}
+.alt{background:var(--surface-2)}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.mini{padding:22px}
+.mini b{display:block;font-size:17px;margin-bottom:4px}
+.mini span{color:var(--muted);font-size:15.5px}
+.video{border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#000;box-shadow:0 14px 50px rgba(0,0,0,.18)}
+.honest{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.honest .card h3{display:flex;gap:10px;align-items:center}
+.dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.dl .card{display:flex;flex-direction:column;gap:6px}
+.dl .card .btn{margin-top:auto;justify-content:center}
+.dl small{color:var(--muted);font-size:14px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:0 20px;margin:0 0 10px}
+summary{cursor:pointer;font-weight:650;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-weight:400;font-size:22px;line-height:1;color:var(--muted)}
+details[open] summary::after{content:"\2212"}
+details > div{padding:0 0 16px;color:var(--muted)}
+details ol,details ul{margin:6px 0;padding-left:22px}
+footer{background:var(--hero);color:var(--hero-muted);padding:40px 0;font-size:14.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center}
+footer a{color:var(--hero-muted)}
+footer .sp{flex:1}
+@media (max-width:900px){
+  .aud,.grid3,.dl,.honest{grid-template-columns:1fr}
+  .feature,.feature.flip{grid-template-columns:1fr;gap:20px}
+  .feature.flip .ft{order:0}
+  .nav nav a.hide-sm{display:none}
+  section{padding:60px 0}
+}
+@media (max-width:520px){.nav nav a{display:none}.hero{padding-top:44px}}
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#"><img src="assets/icon.png" alt=""><span>Project Binder<small>by JMTK Technology</small></span></a>
+  <nav aria-label="Main">
+    <a href="#who" class="hide-sm">Who it's for</a>
+    <a href="#features" class="hide-sm">Features</a>
+    <a href="#demo">Demo</a>
+    <a href="#faq">FAQ</a>
+    <a class="btn primary" href="#download">Download</a>
+  </nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <h1>Every document your board, project or paper needs, built from one intake.</h1>
+  <p class="lead">Answer one short questionnaire. Project Binder builds the right set of documents: formal agendas and minutes under Robert's Rules, project charters, schedules, budgets and risk registers, or a thesis framework with citations. Edit, print, or download Word, Excel, Markdown or a shareable web page.</p>
+  <div class="ctas">
+    <a class="btn primary" href="#download">Download free for Windows or Mac</a>
+    <a class="btn ghost" href="#demo">Watch the 1-minute demo</a>
+  </div>
+  <p class="note">Free during early access &middot; Works offline &middot; No account, no subscription &middot; Your data stays on your computer</p>
+  <img class="shot" src="assets/shots/07-minutes.jpg" alt="Project Binder showing formal meeting minutes with motions, votes and results" width="1600" height="900">
+</div></div>
+
+<section id="who"><div class="wrap">
+  <p class="kicker">Who it's for</p>
+  <h2>Made for the person who prepares the paperwork</h2>
+  <p class="sub">Board secretaries, project leads and students all spend hours building the same documents from scratch. Project Binder gives you a complete, right-sized set in minutes.</p>
+  <div class="aud">
+    <div class="card lead"><span class="tag">Built for boards</span><h3>Boards, HOAs and nonprofits</h3>
+      <p>Run capital projects and meetings the way your bylaws expect.</p>
+      <ul><li>Formal agenda in the standard order of business</li><li>Minutes with every motion, vote and result</li><li>A running motion log across meetings</li><li>Plain-language Robert's Rules quick reference</li><li>Project charter, budget, risks and closure report</li></ul></div>
+    <div class="card"><h3>Small and medium businesses</h3>
+      <p>Waterfall, Agile or Hybrid, sized from small to enterprise.</p>
+      <ul><li>Charter, business case, scope and schedule</li><li>Budget, RACI, risk and issue logs</li><li>Status reports with history</li><li>Specialist documents for software, construction, events and more</li></ul></div>
+    <div class="card"><h3>Students</h3>
+      <p>From high school essays to a PhD dissertation.</p>
+      <ul><li>Paper framework with section guidance</li><li>Write the paper in the app</li><li>Sources and citations in APA, MLA, Chicago, Harvard and IEEE</li><li>Word export with a title page and references</li></ul></div>
+  </div>
+</div></section>
+
+<section id="features" class="alt"><div class="wrap">
+  <p class="kicker">How it works</p>
+  <h2>One intake. The right documents. Ready to share.</h2>
+  <div class="feature"><div class="ft"><h3>1. Answer one intake</h3><p>Describe the work once: the basics, timeline, budget, people, milestones and risks. Project Binder suggests the size and the approach, and every field has an example and a tip.</p><p>Boards switch on <b>Robert's Rules of Order</b> and set the quorum, chair and secretary.</p></div>
+    <img src="assets/shots/04-roberts.jpg" alt="Intake form with the Meetings and decisions section" loading="lazy" width="1600" height="900"></div>
+  <div class="feature flip"><div class="ft"><h3>2. Get the right documents, already filled in</h3><p>Between 10 and 33 documents are chosen for the size and method of your project, numbered like a professional binder and filled in from your answers. Tick any others you need.</p><p>Fill in remaining blanks in the panel above each document. Tables grow as you add rows.</p></div>
+    <img src="assets/shots/06-fill.jpg" alt="Status report with the fill-in panel open" loading="lazy" width="1600" height="900"></div>
+  <div class="feature"><div class="ft"><h3>3. Run meetings properly</h3><p>The Robert's Rules guide covers quorum, how a motion works, the rank of common motions, votes needed, and exactly what the chair says. Hover over terms like <i>lay on the table</i> to see what they mean.</p></div>
+    <img src="assets/shots/08-guide.jpg" alt="Robert's Rules quick reference" loading="lazy" width="1600" height="900"></div>
+  <div class="feature flip"><div class="ft"><h3>4. Write the paper in the app</h3><p>Students get a framework built for their paper type, with guidance and links for every section, a word count target for each, and citations that format themselves in five styles.</p></div>
+    <img src="assets/shots/09-write.jpg" alt="Write tab with the paper outline and editor" loading="lazy" width="1600" height="900"></div>
+  <div class="feature"><div class="ft"><h3>5. Print or share</h3><p>Print or save as PDF, download Word or Excel, export Markdown, or share a read-only web page. Add your own logo, organization name and footer.</p></div>
+    <img src="assets/shots/10-export.jpg" alt="Export buttons for Print, Word, Excel and Markdown" loading="lazy" width="1600" height="900"></div>
+</div></section>
+
+<section id="demo"><div class="wrap">
+  <p class="kicker">Demo</p>
+  <h2>See it in under a minute</h2>
+  <div class="video"><video controls preload="metadata" poster="assets/demo-poster.jpg" width="1920" height="1080"><source src="assets/demo.mp4" type="video/mp4">Your browser can't play this video. <a href="assets/demo.mp4">Download it</a>.</video></div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <p class="kicker">Built differently</p>
+  <h2>Private by design</h2>
+  <div class="grid3">
+    <div class="card mini"><b>Your data stays yours</b><span>Projects are stored only on your computer. No account, no analytics, no tracking.</span></div>
+    <div class="card mini"><b>Works offline</b><span>Everything runs on your computer. The only optional connection is the daily update check.</span></div>
+    <div class="card mini"><b>No subscription</b><span>Free during early access. No per-seat monthly fees.</span></div>
+    <div class="card mini"><b>63 document templates</b><span>Initiation, planning, execution, closing, specialist documents and academic papers.</span></div>
+    <div class="card mini"><b>Updates itself</b><span>The desktop app checks for new versions once a day and installs them with one click.</span></div>
+    <div class="card mini"><b>Windows and Mac</b><span>A small, fast native app for Windows 10 and 11, and macOS 10.15 or later.</span></div>
+  </div>
+  <div class="honest" style="margin-top:36px">
+    <div class="card"><h3>What it is</h3><p style="margin:0">A document builder for the person who prepares a project's, board's or paper's paperwork, with fill-in guidance and professional exports.</p></div>
+    <div class="card"><h3>What it isn't</h3><p style="margin:0">A shared task tracker. There's no team login or real-time collaboration: share what it makes as Word, Excel, PDF or a read-only web page.</p></div>
+  </div>
+</div></section>
+
+<section id="download"><div class="wrap">
+  <p class="kicker">Download</p>
+  <h2>Get Project Binder</h2>
+  <p class="sub">Version <span id="ver">3.6.0</span>. Free during early access.</p>
+  <div class="dl">
+    <div class="card"><h3>Windows</h3><small>Windows 10 or 11, 64-bit. Installs for your user; no admin needed.</small><a class="btn primary" href="downloads/ProjectBinder-Windows-Setup.exe">Download installer (.exe)</a></div>
+    <div class="card"><h3>Windows portable</h3><small>One file. Runs without installing; doesn't update itself.</small><a class="btn primary" href="downloads/ProjectBinder-Windows-Portable.exe">Download portable (.exe)</a></div>
+    <div class="card"><h3>Mac</h3><small>macOS 10.15 or later. Apple silicon and Intel.</small><a class="btn primary" href="downloads/ProjectBinder-Mac.dmg">Download for Mac (.dmg)</a></div>
+  </div>
+  <p class="sub" style="margin-top:20px;font-size:15px">The first time you open it, your computer may show a warning because the app isn't signed with a paid certificate yet. See <a href="#first-open">how to open it</a>.</p>
+</div></section>
+
+<section id="faq" class="alt"><div class="wrap">
+  <p class="kicker">FAQ</p>
+  <h2>Questions</h2>
+  <details id="first-open"><summary>Windows or my Mac shows a warning. Is it safe?</summary><div>
+    The warning appears because early-access builds aren't yet signed with a paid certificate, not because anything is wrong.
+    <ul><li><b>Windows:</b> if "Windows protected your PC" appears, click <b>More info</b>, then <b>Run anyway</b>.</li>
+    <li><b>Mac (macOS 15 or later):</b> open the app once, click <b>Done</b>, go to <b>System Settings &rarr; Privacy &amp; Security</b>, and click <b>Open Anyway</b>.</li>
+    <li><b>Mac (earlier versions):</b> right-click the app, choose <b>Open</b>, then <b>Open</b>.</li></ul></div></details>
+  <details><summary>Where is my data stored?</summary><div>Only on your computer, inside the app. Choose a save file during the welcome tour, or under <b>Data &rarr; Save automatically to a file</b>, to keep a copy in Documents or a cloud-synced folder such as OneDrive, iCloud Drive or Dropbox. Use <b>Data &rarr; Back up</b> any time.</div></details>
+  <details><summary>Does it need the internet?</summary><div>No. The only optional connection is a once-a-day update check, which asks for the latest version number and nothing else. You can turn it off in the Data menu.</div></details>
+  <details><summary>Can my whole board or team use it together?</summary><div>Project Binder is built for the person preparing the documents. Share the results as Word, Excel, PDF or a read-only web page. Each person who prepares documents installs their own copy.</div></details>
+  <details><summary>Is the Robert's Rules content official?</summary><div>No. It's an original, plain-language summary of the parts boards use most, and it isn't legal advice. Your bylaws and governing law come first. For the full rules, see <i>Robert's Rules of Order Newly Revised</i> (12th edition). Project Binder is not affiliated with or endorsed by the Robert's Rules Association or its publisher.</div></details>
+  <details><summary>Which paper types and citation styles are included?</summary><div>Essays, research papers (IMRaD), literature reviews, capstone reports, master's theses and doctoral dissertations, with APA 7, MLA 9, Chicago (author-date), Harvard and IEEE.</div></details>
+  <details><summary>How do updates work?</summary><div>The desktop app checks once a day. When a new version is available, it asks before installing, then restarts. Your projects are kept. The portable version doesn't update itself; download the new one from this page.</div></details>
+  <details><summary>Will it cost money later?</summary><div>Project Binder is free during early access. If paid licenses are introduced later, early-access users will be told in advance.</div></details>
+</div></section>
+
+<footer><div class="wrap">
+  <span>&copy; 2026 JMTK Technology. All rights reserved.</span>
+  <span class="sp"></span>
+  <a href="privacy.html">Privacy</a>
+  <a href="license.html">License</a>
+  <a href="mailto:joefabre@me.com?subject=Project%20Binder">Contact: joefabre@me.com</a>
+</div></footer>
+<script>
+fetch('latest.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j&&j.version)document.getElementById('ver').textContent=j.version}).catch(()=>{});
+</script>
+</body>
+</html>
