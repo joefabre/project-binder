@@ -1,0 +1,19 @@
+{
+  "version": "3.6.0",
+  "notes": "Welcome tour, a board sample run under Robert's Rules, automatic updates, and privacy and notices in About.",
+  "pub_date": "2026-11-01T23:29:33Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQy9CUWFGT2lOOWxCZ2JOQkV1cElFYTJtT2xEUStLUzY2UVV0Q1BZbFZFQ1lVaVFVTCs5NHhPMDJSZllPbDROZ2k0RXZaTzZZQ01jRFdTVyt3d3NHM1JVWCtqaFQ1ZndzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNTc1NjAwCWZpbGU6UHJvamVjdCBCaW5kZXJfMy42LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjMuNi4wCnlnaVdLV05xWHJqdndtTm9JMkdnNDVhMVJYSEVnbWo3Y1JkR2VnOE1TZ2hTVjNxQUJvbXI5ZkRCQjhnbUxxL0N4c3R6aWxmcjNKb0dZdStiTzgwakNBPT0K",
+      "url": "https://joefabre.github.io/project-binder/downloads/3.6.0/ProjectBinder_3.6.0_x64-setup.exe"
+    },
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQy9CUWFGT2lOOXRKc0tpdG5zbDRBM24zYkcxNVhBN3NtZU8zY242eElOUHdCVUxyMzdvVlZVbkdFTElqWU90U2RLait2Y2czaUljSTB5amNtajIzQ290SXJkVEJpRmdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNTc1Mzk5CWZpbGU6UHJvamVjdCBCaW5kZXIuYXBwLnRhci5negl2ZXJzaW9uOjMuNi4wClBrTWxHeEJVL2tkVlZhcldSd204UVROeG5YSWVGZXlLRnc4TStJaWVWL1NYb2NHRFIwWnpla1R6VXRqbTlPMXQ5YjBuY1o0aWsyQ2s1K2wvMG1FWENnPT0K",
+      "url": "https://joefabre.github.io/project-binder/downloads/3.6.0/ProjectBinder_3.6.0_universal.app.tar.gz"
+    },
+    "darwin-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQy9CUWFGT2lOOXRKc0tpdG5zbDRBM24zYkcxNVhBN3NtZU8zY242eElOUHdCVUxyMzdvVlZVbkdFTElqWU90U2RLait2Y2czaUljSTB5amNtajIzQ290SXJkVEJpRmdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNTc1Mzk5CWZpbGU6UHJvamVjdCBCaW5kZXIuYXBwLnRhci5negl2ZXJzaW9uOjMuNi4wClBrTWxHeEJVL2tkVlZhcldSd204UVROeG5YSWVGZXlLRnc4TStJaWVWL1NYb2NHRFIwWnpla1R6VXRqbTlPMXQ5YjBuY1o0aWsyQ2s1K2wvMG1FWENnPT0K",
+      "url": "https://joefabre.github.io/project-binder/downloads/3.6.0/ProjectBinder_3.6.0_universal.app.tar.gz"
+    }
+  }
+}
