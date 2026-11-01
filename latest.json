@@ -1,19 +1,19 @@
 {
-  "version": "3.6.0",
-  "notes": "Welcome tour, a board sample run under Robert's Rules, automatic updates, and privacy and notices in About.",
-  "pub_date": "2026-11-01T23:29:33Z",
+  "version": "3.7.0",
+  "notes": "New Settings (gear icon or Ctrl+,): theme, text size, saving and backups, updates, and new project defaults for your organization, logo, officers and citation style. Plus a short splash screen at startup.",
+  "pub_date": "2026-11-01T23:53:24Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQy9CUWFGT2lOOWxCZ2JOQkV1cElFYTJtT2xEUStLUzY2UVV0Q1BZbFZFQ1lVaVFVTCs5NHhPMDJSZllPbDROZ2k0RXZaTzZZQ01jRFdTVyt3d3NHM1JVWCtqaFQ1ZndzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNTc1NjAwCWZpbGU6UHJvamVjdCBCaW5kZXJfMy42LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjMuNi4wCnlnaVdLV05xWHJqdndtTm9JMkdnNDVhMVJYSEVnbWo3Y1JkR2VnOE1TZ2hTVjNxQUJvbXI5ZkRCQjhnbUxxL0N4c3R6aWxmcjNKb0dZdStiTzgwakNBPT0K",
-      "url": "https://joefabre.github.io/project-binder/downloads/3.6.0/ProjectBinder_3.6.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQy9CUWFGT2lOOW5XVEI4b08xQXRjcWcycWxjamhKSWlJcGJpSzhNLzV6T0tWa3MzUTI1cVVBbHViK1RQek14MUxubUszbEVZdUdzVFVkc1FyRHltVE1HK1ZSRTZNT1EwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNTc3MTczCWZpbGU6UHJvamVjdCBCaW5kZXJfMy43LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjMuNy4wCkQ1eWxUQmFjZjhsclJEVXEzeXpIZzNLSG5tNHpBWVJzQXRuT20ySnpSd3JsOWRFbnJSNEhCVVI0KytkakdFSk54cTdYTTNNelJrZnNjYnRwbFFuTUNRPT0K",
+      "url": "https://joefabre.github.io/project-binder/downloads/3.7.0/ProjectBinder_3.7.0_x64-setup.exe"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQy9CUWFGT2lOOXRKc0tpdG5zbDRBM24zYkcxNVhBN3NtZU8zY242eElOUHdCVUxyMzdvVlZVbkdFTElqWU90U2RLait2Y2czaUljSTB5amNtajIzQ290SXJkVEJpRmdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNTc1Mzk5CWZpbGU6UHJvamVjdCBCaW5kZXIuYXBwLnRhci5negl2ZXJzaW9uOjMuNi4wClBrTWxHeEJVL2tkVlZhcldSd204UVROeG5YSWVGZXlLRnc4TStJaWVWL1NYb2NHRFIwWnpla1R6VXRqbTlPMXQ5YjBuY1o0aWsyQ2s1K2wvMG1FWENnPT0K",
-      "url": "https://joefabre.github.io/project-binder/downloads/3.6.0/ProjectBinder_3.6.0_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQy9CUWFGT2lOOW5BQkVFbFFMOWgxRUU2K1o5eDRDK0g4ZGxZRnE5VG9KSEh4aVJuOVNsSnFRMHh5OGRrSFRYK2loU3Z0eVJReG5kNThLSVg4MXBMQnZERVR4cVYrbWdZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNTc3MTA0CWZpbGU6UHJvamVjdCBCaW5kZXIuYXBwLnRhci5negl2ZXJzaW9uOjMuNy4wCjJXdWxOc0x0ZFdCUHZJd2xhR3gyKzI2elRKTlFHV2dNR3RCbmdOeFVwaEJ5ZGo4dHVVcU1ZQ0dUc0cwYXBmcmkzWnU0ajY2Nyt4Sk8raEVENGhEdEJnPT0K",
+      "url": "https://joefabre.github.io/project-binder/downloads/3.7.0/ProjectBinder_3.7.0_universal.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQy9CUWFGT2lOOXRKc0tpdG5zbDRBM24zYkcxNVhBN3NtZU8zY242eElOUHdCVUxyMzdvVlZVbkdFTElqWU90U2RLait2Y2czaUljSTB5amNtajIzQ290SXJkVEJpRmdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNTc1Mzk5CWZpbGU6UHJvamVjdCBCaW5kZXIuYXBwLnRhci5negl2ZXJzaW9uOjMuNi4wClBrTWxHeEJVL2tkVlZhcldSd204UVROeG5YSWVGZXlLRnc4TStJaWVWL1NYb2NHRFIwWnpla1R6VXRqbTlPMXQ5YjBuY1o0aWsyQ2s1K2wvMG1FWENnPT0K",
-      "url": "https://joefabre.github.io/project-binder/downloads/3.6.0/ProjectBinder_3.6.0_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQy9CUWFGT2lOOW5BQkVFbFFMOWgxRUU2K1o5eDRDK0g4ZGxZRnE5VG9KSEh4aVJuOVNsSnFRMHh5OGRrSFRYK2loU3Z0eVJReG5kNThLSVg4MXBMQnZERVR4cVYrbWdZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNTc3MTA0CWZpbGU6UHJvamVjdCBCaW5kZXIuYXBwLnRhci5negl2ZXJzaW9uOjMuNy4wCjJXdWxOc0x0ZFdCUHZJd2xhR3gyKzI2elRKTlFHV2dNR3RCbmdOeFVwaEJ5ZGo4dHVVcU1ZQ0dUc0cwYXBmcmkzWnU0ajY2Nyt4Sk8raEVENGhEdEJnPT0K",
+      "url": "https://joefabre.github.io/project-binder/downloads/3.7.0/ProjectBinder_3.7.0_universal.app.tar.gz"
     }
   }
 }
